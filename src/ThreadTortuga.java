@@ -1,3 +1,6 @@
+/**
+ * @author von
+ */
 public class ThreadTortuga extends Thread {
     private Personaje personaje;
     private int longitudPista;
@@ -15,10 +18,10 @@ public class ThreadTortuga extends Thread {
     public void run() {
         while (!personaje.haTerminado(longitudPista)) {
             personaje.moverse();
-            //personaje.mostrarPosicion();
+            // personaje.mostrarPosicion();
             interfaz.actualizarCarrera();
 
-            if (personaje.getX() >= (longitudPista - 250)) {
+            if (personaje.getX() >= (longitudPista - 300)) {
                 monitor.despertar(); // Despierta al conejo
             }
             try {
@@ -30,5 +33,4 @@ public class ThreadTortuga extends Thread {
         System.out.println(personaje.getNombre() + " ha terminado la carrera.");
     }
 
-    
 }

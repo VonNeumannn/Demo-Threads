@@ -1,6 +1,4 @@
-
 /**
- *
  * @author von
  */
 public class Personaje {
@@ -20,10 +18,6 @@ public class Personaje {
 
     public void moverse() {
         x += velocidad;
-    }
-
-    public void mostrarPosicion() {
-        System.out.println("Posición de " + nombre + ": (" + x + ", " + y + ")");
     }
 
     public boolean haTerminado(int longitudPista) {
@@ -48,12 +42,12 @@ public class Personaje {
                 // Si la tortuga está a 10 de la meta, se despierta
                 if (personaje.getX() >= (longitudPista - 10)) {
                     dormido = false;
-                    System.out.println(nombre + " se despertó y sigue corriendo.");
                 }
             }
         }
     }
 
+    // Getters y Setters
     public double getX() {
         return x;
     }
@@ -68,5 +62,13 @@ public class Personaje {
 
     public String getSprite() {
         return sprite;
+    }
+
+    public int getVelocidad() {
+        return velocidad;
+    }
+    
+    public void setVelocidad(int velocidad) {
+        this.velocidad = velocidad;
     }
 }

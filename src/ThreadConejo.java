@@ -1,12 +1,17 @@
+/**
+ * @author von
+ */
 public class ThreadConejo extends Thread {
     private Personaje personaje;
+    private Personaje tortuga;
     private int longitudPista;
     private Interfaz interfaz;
     private CarreraMonitor monitor;
 
-    public ThreadConejo(Personaje personaje, int longitudPista, Interfaz interfaz,
+    public ThreadConejo(Personaje personaje, Personaje tortuga, int longitudPista, Interfaz interfaz,
             CarreraMonitor monitor) {
         this.personaje = personaje;
+        this.tortuga = tortuga;
         this.longitudPista = longitudPista;
         this.interfaz = interfaz;
         this.monitor = monitor;
@@ -19,7 +24,14 @@ public class ThreadConejo extends Thread {
             if (personaje.getX() >= puntoDormir) {
                 monitor.esperar();
             }
-            personaje.moverse();
+            if (personaje.getX() < tortuga.getX() - 1 && tortuga.getX() >= 10) {
+                personaje.setVelocidad(tortuga.getVelocidad() - 1);
+                personaje.moverse();
+            }
+            else {
+                personaje.moverse();
+            }
+            
             //personaje.mostrarPosicion();
             interfaz.actualizarCarrera();
             try {

@@ -1,3 +1,6 @@
+/**
+ * @author von
+ */
 import java.awt.*;
 import java.net.URL;
 
