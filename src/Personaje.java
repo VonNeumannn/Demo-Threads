@@ -1,5 +1,6 @@
 /**
- * @author von
+ * @author Justin Acuña Barrantes - 2018093451
+ *         Clase que representa un personaje en la carrera
  */
 public class Personaje {
     private String nombre;
@@ -22,29 +23,6 @@ public class Personaje {
 
     public boolean haTerminado(int longitudPista) {
         return x >= longitudPista;
-    }
-
-    public void dormir(int longitudPista, Personaje personaje) {
-        int puntoDormir = (int) (Math.random() * (longitudPista - 20)) + 10; // Punto aleatorio en la pista
-        boolean dormido = false;
-
-        if (x >= puntoDormir) {
-            dormido = true;
-            System.out.println(nombre + " se ha dormido en " + x);
-
-            while (dormido) {
-                try {
-                    Thread.sleep(500); // El conejo duerme medio segundo
-                } catch (InterruptedException ex) {
-                    System.err.println("Error en la carrera");
-                }
-
-                // Si la tortuga está a 10 de la meta, se despierta
-                if (personaje.getX() >= (longitudPista - 10)) {
-                    dormido = false;
-                }
-            }
-        }
     }
 
     // Getters y Setters

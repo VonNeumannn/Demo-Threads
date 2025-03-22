@@ -1,5 +1,7 @@
+
 /**
- * @author von
+ * @author Justin Acuña Barrantes - 2018093451
+ * Clase que representa una carrera
  */
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +9,7 @@ import java.util.List;
 /**
  *
  * @author von
- */ 
+ */
 public class Carrera {
     private Pista pista;
     private List<Personaje> personajes;

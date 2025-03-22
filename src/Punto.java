@@ -1,6 +1,7 @@
 /**
  *
- * @author von
+ * @author Justin Acuña Barrantes - 2018093451
+ *         Clase que representa un punto en un plano cartesiano de la pista
  */
 public class Punto {
     private double x;

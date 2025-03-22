@@ -1,5 +1,6 @@
 /**
- * @author von
+ * @author Justin Acuña Barrantes - 2018093451
+ *         Clase que representa un hilo para el conejo
  */
 public class ThreadConejo extends Thread {
     private Personaje personaje;
@@ -17,6 +18,7 @@ public class ThreadConejo extends Thread {
         this.monitor = monitor;
     }
 
+    // Aquí el conejo se duerme de manera aleatorio en algún punto de la pista
     @Override
     public void run() {
         int puntoDormir = (int) (Math.random() * ((longitudPista - 400) - 200)) + 200;
@@ -27,12 +29,11 @@ public class ThreadConejo extends Thread {
             if (personaje.getX() < tortuga.getX() - 1 && tortuga.getX() >= 10) {
                 personaje.setVelocidad(tortuga.getVelocidad() - 1);
                 personaje.moverse();
-            }
-            else {
+            } else {
                 personaje.moverse();
             }
-            
-            //personaje.mostrarPosicion();
+
+            // personaje.mostrarPosicion();
             interfaz.actualizarCarrera();
             try {
                 Thread.sleep(10);

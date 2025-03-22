@@ -1,5 +1,6 @@
 /**
- * @author von
+ * @author Justin Acuña Barrantes - 2018093451
+ * Clase que representa la interfaz gráfica de la carrera
  */
 import java.awt.*;
 import java.net.URL;
@@ -13,7 +14,7 @@ public class Interfaz extends JFrame {
     public Interfaz(Personaje conejo, Personaje tortuga) {
         this.conejo = conejo;
         this.tortuga = tortuga;
-        //  size for parameters of JFrame
+        // size for parameters of JFrame
         int WIDTH = 1400;
         int HEIGHT = 500;
 

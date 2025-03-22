@@ -1,5 +1,6 @@
 /**
- * @author von
+ * @author Justin Acuña Barrantes - 2018093451
+ *         Clase que representa un hilo para la tortuga
  */
 public class ThreadTortuga extends Thread {
     private Personaje personaje;
